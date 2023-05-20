@@ -1,0 +1,46 @@
+.title{
+    color:white;
+    background-color: #1976d2;
+    padding: 15px;
+}
+
+#myInput{
+    font-size: 16px;
+    padding:12px;
+    border: 1px solid #ddd;
+    margin: 12px;
+}
+
+#myUL{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a{
+    border: 1px solid #ddd;
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+}
+
+#myUL li a:hover{
+    background-color: #eee;
+}
+
+img{
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    margin:10px;
+    border-bottom: 1px solid #808080;
+    padding: 10px;
+}
+
+.col{
+    padding: 5px 10px;
+}
