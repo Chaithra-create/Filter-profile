@@ -1,14 +1,16 @@
 .title{
     color:white;
-    background-color: #1976d2;
+    background-color: #176B87 ;
     padding: 15px;
 }
 
-#myInput{
+input{
     font-size: 16px;
     padding:12px;
     border: 1px solid #ddd;
     margin: 12px;
+    position: relative;
+    left: 4rem;
 }
 
 #myUL{
@@ -28,11 +30,6 @@
     background-color: #eee;
 }
 
-img{
-    border-radius: 50%;
-    border: 5px solid blue;
-}
-
 .card{
     display: flex;
     align-items: center;
@@ -43,4 +40,13 @@ img{
 
 .col{
     padding: 5px 10px;
+}
+
+.profile{
+    border-radius: 50%;
+    width: 25px;
+}
+
+.filter-text{
+    position: absolute;
 }

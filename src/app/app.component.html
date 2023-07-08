@@ -1,45 +1,37 @@
-
 <div class="title">
-  <h2>Messages</h2>
+  <h2>Recruit Now</h2>
 </div>
-
 
 <div class="profiles">
-  <input type="search" id="myInput" (keyup)="search()" placeholder="Search people">
-    <div *ngFor="let element of arr" class="profile-div">
-      <div class="card">
-          <img [src]="element.picture.thumbnail" alt="profile-pic">
-          <div class="row">
-            <div class="prof-name col">
-              <b>{{element.name.first}}</b>
-              
-            </div> 
-              <div class="prof-cell col">
-                {{element.cell}}
-              </div>   
-          </div>
-   
+  <h4 class="filter-text">Filter By</h4>
+  <input
+    type="search"
+    id="myInput-1"
+    (keyup)="search1()"
+    placeholder="Search Location"
+  />
+  <input
+    type="search"
+    id="myInput-2"
+    (keyup)="search2()"
+    placeholder="Search Role"
+  />
+  <div *ngFor="let element of posts" class="profile-div">
+    <div class="card">
+      <img src="../assets/user-regular.svg" alt="profile-pic" class="profile" />
+      <div class="row">
+        <div class="prof-name col">
+          <b>{{ element.first_name }}</b>
+        </div>
+        <div class="prof-designation col">
+          {{ element.employment.title }}
+        </div>
+        <div class="prof-address col">
+          {{ element.address.city }}
+        </div>
       </div>
-
-     <!-- {{element | json}} -->
     </div>
+  </div>
 </div>
-
-<!-- <div class="search-profile">
-  <input type="search" id="myInput" (keyup)="search()" placeholder="Search people">
-    <ul id="myUL">
-      <li><a href="#">Adele</a> </li>
-      <li><a href="#">Agnes</a></li>
-    
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-    
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
-    </ul>
-  
-  </div> -->
-
 
 <router-outlet></router-outlet>

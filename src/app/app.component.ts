@@ -18,14 +18,15 @@ export class AppComponent implements OnInit {
   arr:any;
   constructor(private fetchData: FetchDataService){
   }
-  search() :any  {
-    this.input = document.getElementById('myInput');
+  search1() :any  {
+    this.input = document.getElementById('myInput-1');
     this.filter = this.input.value.toUpperCase();
      console.log(this.filter);
      this.ul = document.getElementsByClassName('card');
-     this.li = document.getElementsByClassName('prof-name');
+     this.li = document.getElementsByClassName('prof-address');
      for(let i=0; i<this.li.length; i++){
       this.txtValue = this.li[i].textContent;
+      console.log(this.txtValue);
       if(this.txtValue.toUpperCase().indexOf(this.filter) > -1)
       {
        this.ul[i].style.display = "";
@@ -34,26 +35,30 @@ export class AppComponent implements OnInit {
            this.ul[i].style.display = "none";
       }
      }
-    // this.ul = document.getElementById('myUL');
-    // this.li = this.ul.getElementsByTagName('li');
-    // for(let i=0; i<this.li.length; i++){
-    //   this.a = this.li[i].getElementsByTagName('a')[0];
-    //   console.log(this.a);
-    //   this.txtValue = this.a.textContent;
-    //   console.log(this.txtValue);
-    //   if(this.txtValue.toUpperCase().indexOf(this.filter) > -1){
-    //     this.li[i].style.display = ""; 
-    //   }
-    //   else {
-    //     this.li[i].style.display = "none"; 
-    //   }
-    // }
+}
+
+search2() :any  {
+  this.input = document.getElementById('myInput-2');
+  this.filter = this.input.value.toUpperCase();
+   console.log(this.filter);
+   this.ul = document.getElementsByClassName('card');
+   this.li = document.getElementsByClassName('prof-designation');
+   for(let i=0; i<this.li.length; i++){
+    this.txtValue = this.li[i].textContent;
+    console.log(this.txtValue);
+    if(this.txtValue.toUpperCase().indexOf(this.filter) > -1)
+    {
+     this.ul[i].style.display = "";
+    }
+    else{
+         this.ul[i].style.display = "none";
+    }
+   }
 }
   ngOnInit(){
     this.fetchData.getdata().subscribe(response => {
       this.posts= response;
-      this.arr = this.posts.results;
-      console.log(this.arr);
+      console.log(this.posts);
     });
   }
 
